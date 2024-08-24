@@ -43,6 +43,7 @@ class PyOnnx(PythonPackage):
     depends_on("cmake@3.1:", type="build")
     depends_on("cmake@3.14:", type="build", when="@1.17:")
     depends_on("py-pybind11@2.2:", type=("build", "link"))
+    conflicts("%gcc@14", when="@:1.15.0")
 
     # requirements.txt
     depends_on("py-setuptools@64:", type="build")
