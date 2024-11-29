@@ -73,6 +73,11 @@ class Vecgeom(CMakePackage, CudaPackage):
         deprecated=True,
     )
 
+    patch(
+        "fix-templates-clang.patch",
+        when="@:1.2.10 %clang@19:"
+    )
+
     depends_on("cxx", type="build")
 
     _cxxstd_values = (conditional("11", "14", when="@:1.1"), "17", conditional("20", when="@1.2:"))
