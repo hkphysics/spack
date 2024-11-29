@@ -48,6 +48,7 @@ class Gdb(AutotoolsPackage, GNUMirrorPackage):
     depends_on("fortran", type="build")  # generated
 
     conflicts("%gcc@14", when="@:13.0")
+    conflicts("%clang@19", when="@:13.0")
 
     variant("python", default=True, description="Compile with Python support", when="@8.2:")
     variant("xz", default=True, description="Compile with lzma support")
