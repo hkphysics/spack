@@ -65,6 +65,8 @@ class PyOnnxruntime(CMakePackage, PythonExtension, ROCmPackage):
     depends_on("py-sympy@1.1:", type=("build", "run"))
 
     depends_on("protobuf")
+    # https://github.com/microsoft/onnxruntime/issues/21308
+    depends_on("protobuf@:3.25.3", when="@:1.20.1")
     # https://github.com/microsoft/onnxruntime/pull/11639
     depends_on("protobuf@:3.19", when="@:1.11")
     depends_on("py-cerberus", type=("build", "run"))
