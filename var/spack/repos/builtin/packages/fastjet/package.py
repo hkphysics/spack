@@ -120,6 +120,9 @@ class Fastjet(AutotoolsPackage):
         level=1,
         when="@2.4.0:3.4.3",
     )
+    # This fixes a template issue which passes gcc but
+    # breaks clang errors
+    patch("template.patch", when="@:3.4.3 %clang")
 
     def configure_args(self):
         extra_args = []
