@@ -115,6 +115,7 @@ class Rivet(AutotoolsPackage):
     patch("rivet-3.0.1.patch", when="@3.0.1", level=0)
     patch("rivet-3.1.0.patch", when="@3.1.0", level=0)
     patch("rivet-3.1.1.patch", when="@3.1.1", level=0)
+    patch("rivet-3.1-clang.patch", when="@3.1.0:3.1.11 %clang@19:")
 
     @run_before("configure")
     def copy_gsl_m4(self):
