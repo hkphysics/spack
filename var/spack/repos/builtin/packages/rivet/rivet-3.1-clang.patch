@@ -1,0 +1,13 @@
+diff --git a/src/Core/Analysis.cc b/src/Core/Analysis.cc
+index 35ea60e04..8f38a9f43 100644
+--- a/src/Core/Analysis.cc
++++ b/src/Core/Analysis.cc
+@@ -1145,7 +1145,7 @@ namespace Rivet {
+     if (re != "") {
+       std::smatch match;
+       const bool needsDP = std::regex_search(path, match, std::regex(re));
+-      if (needsDP)  yao.template setAnnotation("WriterDoublePrecision", "1");
++      if (needsDP)  yao.template setAnnotation<>("WriterDoublePrecision", "1");
+     }
+   }
+ 
