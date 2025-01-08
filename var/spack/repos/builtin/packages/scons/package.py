@@ -10,7 +10,7 @@ class Scons(PythonPackage):
     """SCons is a software construction tool"""
 
     homepage = "https://scons.org"
-    pypi = "SCons/SCons-4.5.1.tar.gz"
+    pypi = "SCons/scons-4.5.1.tar.gz"
 
     tags = ["build-tools", "windows"]
 
