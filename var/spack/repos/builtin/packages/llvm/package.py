@@ -941,6 +941,7 @@ class Llvm(CMakePackage, CudaPackage, LlvmDetection, CompilerPackage):
         cmake_args = [
             define("LLVM_REQUIRES_RTTI", True),
             define("LLVM_ENABLE_RTTI", True),
+            define("LLVM_ENABLE_EH", True),
             define("LLVM_ENABLE_LIBXML2", False),
             define("CLANG_DEFAULT_OPENMP_RUNTIME", "libomp"),
             define("LIBOMP_USE_HWLOC", True),
