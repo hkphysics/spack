@@ -120,6 +120,7 @@ class Podio(CMakePackage):
     conflicts("+rntuple", when="@:0.16", msg="rntuple support requires at least podio@0.17")
     conflicts("+rntuple ^root@6.32:", when="@:0.99", msg="rntuple API change requires podio@1:")
     conflicts("+rntuple ^root@6.34:", when="@:1.1", msg="rntuple API change requires podio@1.2:")
+    conflicts("%gcc@14", when="@:0.99")
 
     # See https://github.com/AIDASoft/podio/pull/600
     patch(
